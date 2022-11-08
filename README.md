@@ -1,4 +1,4 @@
-# M1-S5-HTML-DevinHouse
+# M1-S5-JS-DevinHouse
 ## Classes, Atributos, Encapsulamento (closure), Herança, Polimorfismo e Módulos (export e import) 
 
 Em um arquivo `app.js` incluído em `index.html` de tipo módulo `type="module"`:
