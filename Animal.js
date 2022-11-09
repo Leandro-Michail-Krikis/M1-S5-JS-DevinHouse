@@ -8,4 +8,7 @@ export default class Animal {
         this.som = som
     }
     
+    get som () {
+        return this.som
+    }
 }
