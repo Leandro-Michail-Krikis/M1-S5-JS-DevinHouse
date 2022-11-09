@@ -1,33 +1,21 @@
 # M1-S5-JS-DevinHouse
 # Classes, Atributos, Encapsulamento (closure), Herança, Polimorfismo e Módulos (export e import) 
 
-Em três arquivos (`index.html`, `app.js`, `Personagem.js`) resolva o seguinte exercício:
+Em três arquivos (`index.html`, `app.js`, `Animal.js`) resolva o seguinte exercício:
 
 Inclua o arquivo `app.js` em `index.html` como `type="module"`.
 
-Para modelar um jogo de ação, em `Personajem.js`, crie a classe **Personagem** que possua os atributos `nome` e `percentualVida` e a exporte como padrão (`export default`).
+No arquivo `Animal.js`, crie a classe **Animal** com os atributos `nome`, `idade` e `som`.
 
-O `nome` deve ser indicado no construtor da classe, e o percentual de vida é iniciado com 100.
+Depois crie as subclasses (de **Animal**) **Cachorro** e **Gato** com os atributos `nome` e `idade`, inicializando o atributo `som` da superclasse com `"latido"` e `"miado"`, respectivamente e exporte ambas com `export` comuns.
 
-Crie o método `sofreuDano(percentualDano)` cuja implementação diminua o valor de `percentualDano` do percentual de vida do personagem
-(até o limite de zero).
+Importe as classes `Cahorro` e `Gato` para `app.js`, crie uma instância de cada subclasse para testar, conforme abaixo.
 
-Crie também o método `usouKitMedico()` que adiciona 10 pontos ao percentual de vida do personagem (até o limite de 100).
-
-Importe a classe `Personagem` em `app.js` e crie pelo menos uma instância de personagem para testar.
-
-Exemplo:
+Exemplos:
 
 ```
-const alyx = new Personagem("Alyx");
-
-console.log(alyx.percentualVida); // 100
-
-alyx.sofreuDano(50);
-
-console.log(alyx.percentualVida); // 50
-
-alyx.usouKitMedico();
-
-console.log(alyx.percentualVida); // 60
+const snoopy = new Cachorro('snoopy', 10);
+console.log( snoopy.som );   // "latido"     
+const frajola = new Gato('frajola', 8);
+console.log( frajola.som );   // "miado"
 ```
