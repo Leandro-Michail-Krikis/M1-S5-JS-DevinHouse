@@ -1,7 +1,9 @@
-import Cachorro from "./Cachorro.js";
-import Gato from "./Gato.js";
+import CalculadoraDeArea from "./CalculadoraDeArea.js";
 
-const snoopy = new Cachorro('snoopy', 10);
-console.log( snoopy.som );   // "latido"     
-const frajola = new Gato('frajola', 8);
-console.log( frajola.som );   // "miado"
+const quadA = new CalculadoraDeArea("quadrado", 6, 6);
+const areaQA = quadA.calcular();
+console.log(areaQA); // 36
+
+const triangB = new CalculadoraDeArea("triangulo", 8, 7);
+const areaTB = triangB.calcular();
+console.log(areaTB); // 28
