@@ -1,19 +1,26 @@
 # M1-S5-JS-DevinHouse
 # Classes, Atributos, Encapsulamento (closure), Herança, Polimorfismo e Módulos (export e import) 
 
-Em três arquivos (`index.html`, `app.js`, `Juros.js`) resolva o seguinte exercício:
+Em quatro arquivos (`index.html`, `app.js`, `Time.js`, `Partida.js`) resolva o seguinte exercício:
 
-Inclua o arquivo `app.js` em `index.html` como `type="module"`.
+Inclua o arquivo `app.js` em `index.html` como `type="module"`. 
 
-Os juros de uma aplicação podem ser calculados de forma simples ou composta.
-Para o cálculo, geralmente se usa a letra `C` ou `M` para representar o montante final da aplicação, a letra `i` para representar a taxa aplicada (ao mês ou anual) e a letra `t` indicando o tempo (em meses ou anos) da aplicação.
+O sistema de pontuação por partida no Campeonato Brasileiro de Futebol funciona assim:
 
-Em `Juros.js`, crie uma classe **Juros**, que tenha como atributos o `capitalInicial`, a `taxaAplicada` e o `tempo` (no mesmo período: meses ou anos) exportando-a como padrão (`export default`).
+    Vitória = 3 pontos
+    Derrota = 0 pontos
+    Empate  = 1 ponto
 
-**a)** Adicione o método `calcularJurosSimples()` que faça o cálculo usando a fórmula `J = C * i * t`
+**a)** Em `Time.js`, implemente uma classe **Time** com os atributos: `nome` do time, `sigla` do time, quantidade de `vitorias`, `derrotas`, `empates`, 
+quantidade de `golsMarcados` e `golsSofridos`.
 
-**b)** Adicione o método `calcularJurosCompostos()` que faça o cálculo usando a fórmula `M = C * (1 + i) ** t`
+**b)** Adicione nesta classe métodos _getters_ para atributos calculados: `numeroDeJogos` (soma de vitorias, derrotas e empates) e `numeroDePontos` (aplicando regra de pontuação acima).
 
-**c)** Importe a classe em `app.js` e teste a implementação da classe imprimindo no console os valores de juros simples e composto para uma aplicação de 10.000 reais a uma taxa de 7% ao mês (ou seja, 0.07) pelo período de 24 meses.
+**c)** Em `Partida.js`, crie uma classe **Partida**, com os atributos: `siglaTimeA`, `golsTimeA`, `siglaTimeB`, `golsTimeB`.
 
-**d)** Teste também (imprimindo igualmente no console) os valores de juros simples e composto para uma aplicação de 10.000 reais a uma taxa de 15% ao ano (ou seja, 0.15) pelo período de 10 anos.
+**d)** Adicione na classe `Time` um método `computarPartida`, que receba uma instância (objeto) de `Partida` como argumento. Se a partida recebida como argumento tiver como time participante (time A ou B) o time da classe, 
+deve-se atualizar os atributos de `vitorias`/`derrotas`/`empates` do time dependendo do resultado da partida e `golsMarcados`/`golsSofridos` conforme placar da partida.
+
+**e)** Adicione mais um método `exibirSituacao()` que imprima no console todos os atributos do time (para conferência das implementações acima).
+
+**f)** Em `app.js` importe e teste suas classes criando uma instâncias dela e instâncias de partidas a serem computadas, para conferir os resultados.
