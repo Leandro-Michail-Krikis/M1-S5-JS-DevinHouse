@@ -1,29 +1,19 @@
 # M1-S5-JS-DevinHouse
 # Classes, Atributos, Encapsulamento (closure), Herança, Polimorfismo e Módulos (export e import) 
 
-Em três arquivos (`index.html`, `app.js`, `CalculadoraDeArea.js`) resolva o seguinte exercício:
+Em três arquivos (`index.html`, `app.js`, `Juros.js`) resolva o seguinte exercício:
 
 Inclua o arquivo `app.js` em `index.html` como `type="module"`.
 
-Em `CalculadoraDeArea.js`, crie uma classe **CalculadoraDeArea** que tenha os atributos `tipo` (_string_), `base` (_number_) e `altura` (_number_).
+Os juros de uma aplicação podem ser calculados de forma simples ou composta.
+Para o cálculo, geralmente se usa a letra `C` ou `M` para representar o montante final da aplicação, a letra `i` para representar a taxa aplicada (ao mês ou anual) e a letra `t` indicando o tempo (em meses ou anos) da aplicação.
 
-Implemente o método `calcular()` que faça o cálculo da área conforme o `tipo` do polígono informado:
+Em `Juros.js`, crie uma classe **Juros**, que tenha como atributos o `capitalInicial`, a `taxaAplicada` e o `tempo` (no mesmo período: meses ou anos) exportando-a como padrão (`export default`).
 
-- "triangulo":  `(base * altura) / 2`
-- "quadrado" e "retangulo" : `base * altura`
+**a)** Adicione o método `calcularJurosSimples()` que faça o cálculo usando a fórmula `J = C * i * t`
 
-Importe a classe `CalculadoraDeArea` em `app.js` e teste a implementação com instâncias dessa classe para um triângulo de base 6 cm e altura 8 cm, para um quadrado de base e altura de 4 cm e um retângulo de base 4 cm e altura 6 cm.
+**b)** Adicione o método `calcularJurosCompostos()` que faça o cálculo usando a fórmula `M = C * (1 + i) ** t`
 
-Imprima o resultado calculado no console.
+**c)** Importe a classe em `app.js` e teste a implementação da classe imprimindo no console os valores de juros simples e composto para uma aplicação de 10.000 reais a uma taxa de 7% ao mês (ou seja, 0.07) pelo período de 24 meses.
 
-Exemplos:
-
-```
-const quadA = new CalculadoraDeArea("quadrado", 6, 6);
-const areaQA = quadA.calcular();
-console.log(areaQA); // 36
-
-const triangB = new CalculadoraDeArea("triangulo", 8, 7);
-const areaTB = triangB.calcular();
-console.log(areaTB); // 28
-```
+**d)** Teste também (imprimindo igualmente no console) os valores de juros simples e composto para uma aplicação de 10.000 reais a uma taxa de 15% ao ano (ou seja, 0.15) pelo período de 10 anos.
