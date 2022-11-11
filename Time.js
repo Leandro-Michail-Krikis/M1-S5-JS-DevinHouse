@@ -39,7 +39,7 @@ export default class Time {
       golsMarcados = golsTimeB
       golsSofridos = golsTimeA
     } else {
-      return // interrompe a execução
+      return 
     }
 
     if (golsMarcados > golsSofridos) {
