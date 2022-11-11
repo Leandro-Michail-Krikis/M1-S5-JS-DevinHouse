@@ -1,9 +1,12 @@
-import Partida from "./Partida.js";
-import Time from "./Time.js";
+import Usuario from "./Usuario.js"
+const botao = document.getElementById("botao")
+const usuario = document.getElementById("usuario")
+const senha = document.getElementById("senha")
 
-const jogo = new Partida ("TimeA", 1 , "TimeB", 1);
-const palmeiras = new Time("TimeA")
+const admin = new Usuario("admin", "admin@devinhouse.com", "admin")
 
-palmeiras.computarPartida(jogo);
-
-console.log(palmeiras.exibirSituacao);
+botao.addEventListener("click", () => {
+  admin.autenticar(usuario.value, senha.value) ? 
+    alert("Login realizado") :
+    alert("Falha no login") 
+})
